@@ -54,6 +54,8 @@
           미궁시작~
         </button>
       </span>
+      <span class="mt-5 flex-center">
+      </span>
     </div>
 
     <div v-if="mode === 'question'">
@@ -79,12 +81,32 @@
 
     <div v-if="mode === 'end'">
       <span class="mt-5 flex-center">
-        <p>
-          여기까지 와줘서 고마워 {{ this.name }} 아~~~ ^^ 결혼 축하해 줘서 기뻐!
-        </p>
+        <p class="mt-5 text-center">
+          <font size="12px">
+            결혼식장에 가기 위해<br>
+            험난한 미궁을 헤쳐온<br>
+            당신의 노고를 치하합니다.<br><br>
+
+            {{this.name}}님이야말로<br>
+            식장에 참석할 자격이 있는<br>
+            진정한 하객의 혼을 지닌 적격자입니다.<br><br>
+
+            당신이 지금까지 헤쳐온 험난한 길은<br>
+            결혼식에 참석할 스스로의 자격을<br>
+            증명하였습니다.<br><br>
+
+            자, 이제 아래 버튼을 눌러 청첩장을 확인하고<br>
+            결혼식에 참가해 보세요!<br><br>
+
+            식장에 입장하여 두 사람의 결혼을 축하하고,<br>
+            참석한 다른 하객들과 자웅을 겨루십시오!<br><br>
+            </font>
+          </p>
       </span>
       <span class="mt-5 flex-center">
         <b-button href="https://bojagicard.com/g/home.php?ecard=zaer0"  variant="outline-info">청첩장 보러가기</b-button>
+      </span>
+      <span class="mt-5 flex-center">
       </span>
     </div>
   </div>
@@ -96,7 +118,7 @@ export default {
   data() {
     return {
       name: undefined,
-      mode: "intro", // intro, start, question, end
+      mode: "end", // intro, start, question, end
       question_num: 0,
       cur_answer: "",
       progress: 0,
