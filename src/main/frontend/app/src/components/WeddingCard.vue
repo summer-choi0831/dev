@@ -1,31 +1,46 @@
 <template xmlns="http://www.w3.org/1999/html" >
   <div class="container-fluid mt-5" >
-    <h1><p class="text-center">미궁 ~ 숨겨진 결혼식장을 찾아라 ~</p></h1>
-
+        <b-img center src='http://13.124.84.76/static/img/title.png' ></b-img>
     <div v-if="mode === 'intro'" class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
+      <div>
         <p class="mt-5 flex-center">
-          <label class="mr-5" for="name">이름 </label>
+          <label class="mr-5" for="name">이름을 입력해주세요. </label>
+        </p>
+        <p class="flex-center">
           <input type="text" id="name" v-model="name" />
         </p>
-        <p class="mt-5 flex-center">
+        <p class="flex-center">
           <button
             type="button"
             class="btn btn-success btn-lg"
             @click="go('start')"
           >
-            입장
+            미궁 입장
           </button>
         </p>
       </div>
-      <div class="col-md-4"></div>
     </div>
 
     <div v-if="mode === 'start'">
       <p class="mt-5 text-center">
-        안녕? {{ this.name }} 아. 문제를 풀어야 결혼식장을 갈수 있어, 자
-        시작해보자
+
+        장재영 X 최선정 <br><br>
+        서로 다른 과거를 살아온 두 사람이<br>
+        이제는 같은 미래를 준비하고자 합니다.<br><br>
+
+        평생을 약속하는 뜻깊은 자리,<br>
+        <b>{{ this.name }}</b>님께서 함께해 주기를 바라는 마음에<br>
+        이번 초대장을 만들게 되었습니다.<br><br>
+
+        초대장 내에 예식에 대한 정보를 담았으니<br>
+        찾아오시는 데 참고하기를 바랍니다.<br><br>
+
+        그럼, 예식이 시작되는 날, 식장에서<br>
+        <b>{{ this.name }}</b>님을 뵐 수 있기를<br>
+        진심으로 고대하고 있겠습니다.<br><br>
+
+        - 재영ㆍ선정 올림<br><br>
+
       </p>
 
       <span class="mt-5 flex-center">
@@ -47,9 +62,6 @@
         <b-img center :src="question[question_num].img" rounded ></b-img>
       </span>
       <span class="mt-5 flex-center">
-        <h6>hint </h6><font color="ffffff">{{question[question_num].hint}}</font>
-      </span>
-      <span class="flex-center">
         <input type="text" id="name" v-model="cur_answer" />
         <button
           type="button"
@@ -58,6 +70,8 @@
         >
           정답 제출
         </button>
+      </span>
+      <span class="mt-5 flex-center">
       </span>
     </div>
 
@@ -68,7 +82,7 @@
         </p>
       </span>
       <span class="mt-5 flex-center">
-        <a href="https://bojagicard.com/g/home.php?ecard=zaer0" >청첩장 받으러가기</a>
+        <b-button href="https://bojagicard.com/g/home.php?ecard=zaer0"  variant="outline-info">청첩장 보러가기</b-button>
       </span>
     </div>
   </div>
@@ -115,7 +129,7 @@ export default {
           this.question_num = num;
           this.cur_answer = "";
         }else{
-          alert("오답입니다. 힌드를 보려면 드래그를 하세요!")
+          alert("오답입니다. \n" + this.question[this.question_num].hint)
         }
 
       } else {
