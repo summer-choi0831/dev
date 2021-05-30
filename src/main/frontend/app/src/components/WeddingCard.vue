@@ -142,9 +142,9 @@ export default {
       this.mode = mode;
     },
     go_question(num) {
-
+      console.log("this.question.length", this.question.length)
+      console.log("num", num)
       if (num < this.question.length) {
-
         if (this.cur_answer === this.question[this.question_num].answer) {
           this.progress = this.progress + 20;
           this.question_num = num;
@@ -153,7 +153,7 @@ export default {
           alert("오답입니다. \n" + this.question[this.question_num].hint)
         }
 
-      } else if (num === this.question.length) {
+      } else {
         if (this.cur_answer === this.question[this.question_num].answer) {
           this.go("end");
         } else {
