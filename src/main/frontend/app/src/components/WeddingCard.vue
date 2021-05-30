@@ -5,13 +5,13 @@
       <div>
         <p class="mt-5 flex-center">
           <label class="mr-5" for="name">
-            <font size="12px">이름을 입력해주세요. </font>
+            <font style="font-size:40px">이름을 입력해주세요. </font>
           </label>
         </p>
-        <p class="flex-center">
-          <input class="form-control form-control-lg" type="text"  v-model="name" />
-        </p>
-        <p class="flex-center">
+        <div class="flex-center">
+          <input class="form-control-lg" type="text"  v-model="name" />
+        </div>
+        <p class="mt-5 flex-center">
           <button
             type="button"
             class="btn btn-success btn-lg"
@@ -51,7 +51,7 @@
           class=" btn btn-success btn-lg"
           @click="go('question')"
         >
-          미궁시작~
+          미궁 시작
         </button>
       </span>
       <span class="mt-5 flex-center">
@@ -66,7 +66,7 @@
         <b-img center :src="question[question_num].img" rounded ></b-img>
       </span>
       <span class="mt-5 flex-center">
-        <input type="text" id="name" v-model="cur_answer" />
+        <input style="font-size:40px" type="text" id="name" v-model="cur_answer" />
         <button
           type="button"
           class=" btn btn-success btn-lg"
@@ -118,17 +118,11 @@ export default {
   data() {
     return {
       name: undefined,
-      mode: "end", // intro, start, question, end
+      mode: "intro", // intro, start, question, end
       question_num: 0,
       cur_answer: "",
       progress: 0,
       question: [
-
-        // { img: "http://13.124.84.76/static/img/01.png", hint: "첫 인연이 시작된날은? 20ㅇㅇ.ㅇ.ㅇㅇ(숫자만)", answer: "" },
-        // { img: "http://13.124.84.76/static/img/02.png", hint: "결혼식 날짜. 6월 ㅇㅇ일(숫자만)", answer: "" },
-        // { img: "http://13.124.84.76/static/img/03.png", hint: "결혼식 시간. ㅇㅇ:ㅇㅇ(숫자만))", answer: "" },
-        // { img: "http://13.124.84.76/static/img/04.png", hint: "지하철역(ㅇㅇㅇ역)", answer: "" },
-        // { img: "http://13.124.84.76/static/img/05.png", hint: "결혼식 장소(대문자)", answer: "" }
         { img: "http://13.124.84.76/static/img/01.png", hint: "첫 인연이 시작된날은? 20ㅇㅇ.ㅇ.ㅇㅇ(숫자만)", answer: "16416" },
         { img: "http://13.124.84.76/static/img/02.png", hint: "결혼식 날짜. 6월 ㅇㅇ일(숫자만)", answer: "13" },
         { img: "http://13.124.84.76/static/img/03.png", hint: "결혼식 시간. ㅇㅇ:ㅇㅇ(숫자만))", answer: "1330" },
@@ -168,6 +162,14 @@ export default {
 body { background-color: #ffffff; }
 .container {
   text-align: center;
+}
+
+.input {
+  font-size:20px
+}
+
+.btn {
+  font-size:30px
 }
 
 .flex-center {
