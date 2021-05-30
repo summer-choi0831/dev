@@ -9,6 +9,7 @@ public class IndexController {
 
     @GetMapping("/wedding_card")
     public String index(){
+        System.out.println("connect");
         return "wedding_card";
     }
 }
