@@ -87,7 +87,7 @@
             험난한 미궁을 헤쳐온<br>
             당신의 노고를 치하합니다.<br><br>
 
-            {{this.name}}님이야말로<br>
+            <b>{{this.name}}</b>님이야말로<br>
             식장에 참석할 자격이 있는<br>
             진정한 하객의 혼을 지닌 적격자입니다.<br><br>
 
@@ -103,8 +103,13 @@
             </font>
           </p>
       </span>
-      <span class="mt-5 flex-center">
-        <b-button href="https://bojagicard.com/g/home.php?ecard=zaer0"  variant="outline-info">청첩장 보러가기</b-button>
+      <span class="flex-center">
+        <button
+          href="https://bojagicard.com/g/home.php?ecard=zaer0"
+          type="button"
+          class="btn btn-outline-info btn-lg"
+          style="font-size:40px"
+        >청첩장 보러가기</button>
       </span>
       <span class="mt-5 flex-center">
       </span>
@@ -118,14 +123,14 @@ export default {
   data() {
     return {
       name: undefined,
-      mode: "intro", // intro, start, question, end
+      mode: "end", // intro, start, question, end
       question_num: 0,
       cur_answer: "",
       progress: 0,
       question: [
         { img: "http://13.124.84.76/static/img/01.png", hint: "첫 인연이 시작된날은? 20ㅇㅇ.ㅇ.ㅇㅇ(숫자만)", answer: "16416" },
         { img: "http://13.124.84.76/static/img/02.png", hint: "결혼식 날짜. 6월 ㅇㅇ일(숫자만)", answer: "13" },
-        { img: "http://13.124.84.76/static/img/03.png", hint: "결혼식 시간. ㅇㅇ:ㅇㅇ(숫자만))", answer: "1330" },
+        { img: "http://13.124.84.76/static/img/03.png", hint: "결혼식 시간. ㅇㅇ:ㅇㅇ(숫자만)", answer: "1330" },
         { img: "http://13.124.84.76/static/img/04.png", hint: "지하철역(ㅇㅇㅇ역)", answer: "보라매" },
         { img: "http://13.124.84.76/static/img/05.png", hint: "결혼식 장소(대문자)", answer: "NOBLESSE" }
       ]
@@ -138,7 +143,7 @@ export default {
     },
     go_question(num) {
 
-      if (num < this.question.length) {
+      if (num <= this.question.length) {
         console.log("go_question", num);
 
         if(this.cur_answer === this.question[this.question_num].answer){
