@@ -4,10 +4,12 @@
     <div v-if="mode === 'intro'" class="row">
       <div>
         <p class="mt-5 flex-center">
-          <label class="mr-5" for="name">이름을 입력해주세요. </label>
+          <label class="mr-5" for="name">
+            <font size="12px">이름을 입력해주세요. </font>
+          </label>
         </p>
         <p class="flex-center">
-          <input type="text" id="name" v-model="name" />
+          <input class="form-control form-control-lg" type="text"  v-model="name" />
         </p>
         <p class="flex-center">
           <button
@@ -23,7 +25,7 @@
 
     <div v-if="mode === 'start'">
       <p class="mt-5 text-center">
-
+        <font size="12px">
         장재영 X 최선정 <br><br>
         서로 다른 과거를 살아온 두 사람이<br>
         이제는 같은 미래를 준비하고자 합니다.<br><br>
@@ -40,7 +42,7 @@
         진심으로 고대하고 있겠습니다.<br><br>
 
         - 재영ㆍ선정 올림<br><br>
-
+        </font>
       </p>
 
       <span class="mt-5 flex-center">
