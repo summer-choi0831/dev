@@ -105,7 +105,7 @@
       </span>
       <span class="flex-center">
         <button
-          href="https://bojagicard.com/g/home.php?ecard=zaer0"
+          onclick="window.open('https://bojagicard.com/g/home.php?ecard=zaer0')"
           type="button"
           class="btn btn-outline-info btn-lg"
           style="font-size:40px"
