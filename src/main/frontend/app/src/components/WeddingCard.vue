@@ -1,6 +1,6 @@
-<template xmlns="http://www.w3.org/1999/html" >
-  <div class="container-fluid mt-5" >
-        <b-img center src='http://13.124.84.76/static/img/title.png' ></b-img>
+<template xmlns="http://www.w3.org/1999/html">
+  <div class="container-fluid mt-5">
+    <b-img center src='http://13.124.84.76/static/img/title.png'></b-img>
     <div v-if="mode === 'intro'" class="row">
       <div>
         <p class="mt-5 flex-center">
@@ -9,7 +9,7 @@
           </label>
         </p>
         <div class="flex-center">
-          <input class="form-control-lg" type="text"  v-model="name" />
+          <input class="form-control-lg" type="text" v-model="name"/>
         </div>
         <p class="mt-5 flex-center">
           <button
@@ -26,22 +26,22 @@
     <div v-if="mode === 'start'">
       <p class="mt-5 text-center">
         <font size="12px">
-        장재영 X 최선정 <br><br>
-        서로 다른 과거를 살아온 두 사람이<br>
-        이제는 같은 미래를 준비하고자 합니다.<br><br>
+          장재영 X 최선정 <br><br>
+          서로 다른 과거를 살아온 두 사람이<br>
+          이제는 같은 미래를 준비하고자 합니다.<br><br>
 
-        평생을 약속하는 뜻깊은 자리,<br>
-        <b>{{ this.name }}</b>님께서 함께해 주기를 바라는 마음에<br>
-        이번 초대장을 만들게 되었습니다.<br><br>
+          평생을 약속하는 뜻깊은 자리,<br>
+          <b>{{ this.name }}</b>님께서 함께해 주기를 바라는 마음에<br>
+          이번 초대장을 만들게 되었습니다.<br><br>
 
-        초대장 내에 예식에 대한 정보를 담았으니<br>
-        찾아오시는 데 참고하기를 바랍니다.<br><br>
+          초대장 내에 예식에 대한 정보를 담았으니<br>
+          찾아오시는 데 참고하기를 바랍니다.<br><br>
 
-        그럼, 예식이 시작되는 날, 식장에서<br>
-        <b>{{ this.name }}</b>님을 뵐 수 있기를<br>
-        진심으로 고대하고 있겠습니다.<br><br>
+          그럼, 예식이 시작되는 날, 식장에서<br>
+          <b>{{ this.name }}</b>님을 뵐 수 있기를<br>
+          진심으로 고대하고 있겠습니다.<br><br>
 
-        - 재영ㆍ선정 올림<br><br>
+          - 재영ㆍ선정 올림<br><br>
         </font>
       </p>
 
@@ -63,10 +63,10 @@
         <div class="progress-bar bg-danger" role="progressbar" v-bind:style="{width : this.progress + '%'}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       <span class="mt-5 flex-center">
-        <b-img center :src="question[question_num].img" rounded ></b-img>
+        <b-img center :src="question[question_num].img" rounded></b-img>
       </span>
       <span class="mt-5 flex-center">
-        <input style="font-size:40px" type="text" id="name" v-model="cur_answer" />
+        <input style="font-size:40px" type="text" id="name" v-model="cur_answer"/>
         <button
           type="button"
           class=" btn btn-success btn-lg"
@@ -87,7 +87,7 @@
             험난한 미궁을 헤쳐온<br>
             당신의 노고를 치하합니다.<br><br>
 
-            <b>{{this.name}}</b>님이야말로<br>
+            <b>{{ this.name }}</b>님이야말로<br>
             식장에 참석할 자격이 있는<br>
             진정한 하객의 혼을 지닌 적격자입니다.<br><br>
 
@@ -128,11 +128,11 @@ export default {
       cur_answer: "",
       progress: 0,
       question: [
-        { img: "http://13.124.84.76/static/img/01.png", hint: "첫 인연이 시작된날은? 20ㅇㅇ.ㅇ.ㅇㅇ(숫자만)", answer: "16416" },
-        { img: "http://13.124.84.76/static/img/02.png", hint: "결혼식 날짜. 6월 ㅇㅇ일(숫자만)", answer: "13" },
-        { img: "http://13.124.84.76/static/img/03.png", hint: "결혼식 시간. ㅇㅇ:ㅇㅇ(숫자만)", answer: "1330" },
-        { img: "http://13.124.84.76/static/img/04.png", hint: "지하철역(ㅇㅇㅇ역)", answer: "보라매" },
-        { img: "http://13.124.84.76/static/img/05.png", hint: "결혼식 장소(대문자)", answer: "NOBLESSE" }
+        {img: "http://13.124.84.76/static/img/01.png", hint: "첫 인연이 시작된날은? 20ㅇㅇ.ㅇ.ㅇㅇ(숫자만)", answer: "16416"},
+        {img: "http://13.124.84.76/static/img/02.png", hint: "결혼식 날짜. 6월 ㅇㅇ일(숫자만)", answer: "13"},
+        {img: "http://13.124.84.76/static/img/03.png", hint: "결혼식 시간. ㅇㅇ:ㅇㅇ(숫자만)", answer: "1330"},
+        {img: "http://13.124.84.76/static/img/04.png", hint: "지하철역(ㅇㅇㅇ역)", answer: "보라매"},
+        {img: "http://13.124.84.76/static/img/05.png", hint: "결혼식 장소(대문자)", answer: "NOBLESSE"}
       ]
     };
   },
@@ -143,38 +143,43 @@ export default {
     },
     go_question(num) {
 
-      if (num <= this.question.length) {
-        console.log("go_question", num);
+      if (num < this.question.length) {
 
-        if(this.cur_answer === this.question[this.question_num].answer){
-          // alert("정답입니다!")
+        if (this.cur_answer === this.question[this.question_num].answer) {
           this.progress = this.progress + 20;
           this.question_num = num;
           this.cur_answer = "";
-        }else{
+        } else {
           alert("오답입니다. \n" + this.question[this.question_num].hint)
         }
 
-      } else {
-        this.go("end");
+      } else if (num === this.question.length) {
+        if (this.cur_answer === this.question[this.question_num].answer) {
+          this.go("end");
+        } else {
+          alert("오답입니다. \n" + this.question[this.question_num].hint)
+        }
       }
     }
   }
 };
 </script>
-<style >
+<style>
 
-body { background-color: #ffffff; }
+body {
+  background-color: #ffffff;
+}
+
 .container {
   text-align: center;
 }
 
 .input {
-  font-size:20px
+  font-size: 20px
 }
 
 .btn {
-  font-size:30px
+  font-size: 30px
 }
 
 .flex-center {
