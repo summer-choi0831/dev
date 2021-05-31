@@ -1,8 +1,8 @@
 package com.summer.dev.domain.wedding;
 
-import lombok.ToString;
+import lombok.Data;
 
-@ToString
+@Data
 public class RecordRequest {
     String start;
     String end;
