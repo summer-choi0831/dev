@@ -1,6 +1,6 @@
 <template xmlns="http://www.w3.org/1999/html">
   <div class="container-fluid mt-5">
-    <b-img center src='http://13.124.84.76/static/img/title.png'></b-img>
+    <b-img center src='http://3.37.98.94/static/img/title.png'></b-img>
     <div v-if="mode === 'intro'" class="row">
       <div>
         <p class="mt-5 flex-center">
