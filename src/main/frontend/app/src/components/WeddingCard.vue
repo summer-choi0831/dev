@@ -20,6 +20,15 @@
             미궁 입장
           </button>
         </p>
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+          <div class="flex-center align-items-end" >
+
+            <span class="alert alert-light" role="alert">
+                문제 제작 : 김홍녕 (dillon0108@naver.com)<br>
+                문구 : 신랑 (zaer0@naver.com)<br>
+                개발 : 신부 (sunjung0831@gmail.com)<br>
+            </span>
+          </div>
       </div>
     </div>
 
@@ -64,8 +73,10 @@
         <div class="progress-bar bg-danger" role="progressbar" v-bind:style="{width : this.progress + '%'}" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
       <span class="mt-5 flex-center">
-        <b-img center :src="question[question_num].img" rounded></b-img>
         <b-img v-bind="{  width: 413, height: 294 }" center :src="question[question_num].card" rounded></b-img>
+      </span>
+      <span class="mt-5 flex-center">
+        <b-img center :src="question[question_num].img" rounded></b-img>
       </span>
       <span class="mt-5 flex-center">
         <input style="font-size:40px" type="text" id="name" v-model="cur_answer"/>
@@ -130,6 +141,8 @@ export default {
       question_num: 0,
       cur_answer: "",
       progress: 0,
+      start_time: undefined,
+      end_time: undefined,
       question: [
         {img: "http://3.37.98.94/static/img/01.png", hint: "첫 인연이 시작된날은? 20ㅇㅇ.ㅇ.ㅇㅇ(숫자만)", answer: "16416", card: "http://3.37.98.94/static/img/card_02.png"},
         {img: "http://3.37.98.94/static/img/02.png", hint: "결혼식 날짜. 6월 ㅇㅇ일(숫자만)", answer: "13", card: "http://3.37.98.94/static/img/card_03.png"},
