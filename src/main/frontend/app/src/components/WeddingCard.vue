@@ -199,13 +199,14 @@ export default {
 
       if(this.mode === "end"){
         this.end_time = moment();
-        this.duration = moment.duration(end_time.diff(start_time)).asSeconds;
+        this.duration = moment.duration(this.end_time.diff(this.start_time)).asSeconds;
       }
       this.sendRecord();
     },
     go_question(num) {
       console.log("this.question.length", this.question.length);
       console.log("num", num);
+      this.sendRecord();
       if (num < this.question.length) {
         if (this.cur_answer === this.question[this.question_num].answer) {
           this.progress = this.progress + 20;
@@ -221,7 +222,6 @@ export default {
           alert("오답입니다. \n" + this.question[this.question_num].hint);
         }
       }
-      this.sendRecord();
     },
     sendRecord: function() {
       let request = {
