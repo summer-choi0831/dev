@@ -128,11 +128,11 @@ export default {
       cur_answer: "",
       progress: 0,
       question: [
-        {img: "http://13.124.84.76/static/img/01.png", hint: "첫 인연이 시작된날은? 20ㅇㅇ.ㅇ.ㅇㅇ(숫자만)", answer: "16416"},
-        {img: "http://13.124.84.76/static/img/02.png", hint: "결혼식 날짜. 6월 ㅇㅇ일(숫자만)", answer: "13"},
-        {img: "http://13.124.84.76/static/img/03.png", hint: "결혼식 시간. ㅇㅇ:ㅇㅇ(숫자만)", answer: "1330"},
-        {img: "http://13.124.84.76/static/img/04.png", hint: "지하철역(ㅇㅇㅇ역)", answer: "보라매"},
-        {img: "http://13.124.84.76/static/img/05.png", hint: "결혼식 장소(대문자)", answer: "NOBLESSE"}
+        {img: "http://3.37.98.94/static/img/01.png", hint: "첫 인연이 시작된날은? 20ㅇㅇ.ㅇ.ㅇㅇ(숫자만)", answer: "16416"},
+        {img: "http://3.37.98.94/static/img/02.png", hint: "결혼식 날짜. 6월 ㅇㅇ일(숫자만)", answer: "13"},
+        {img: "http://3.37.98.94/static/img/03.png", hint: "결혼식 시간. ㅇㅇ:ㅇㅇ(숫자만)", answer: "1330"},
+        {img: "http://3.37.98.94/static/img/04.png", hint: "지하철역(ㅇㅇㅇ역)", answer: "보라매"},
+        {img: "http://3.37.98.94/static/img/05.png", hint: "결혼식 장소(대문자)", answer: "NOBLESSE"}
       ]
     };
   },
