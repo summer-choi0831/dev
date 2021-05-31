@@ -4,16 +4,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@RestController
-public class WeddingCardController {
+@Controller
+public class IndexController {
 
-    @PostMapping("/wedding_card/record")
-    public void record(@RequestBody RecordRequest request) {
-        log.info("record : " + request);
+    @GetMapping("/wedding_card")
+    public String wedding_card() {
+        log.info("wedding_card 접속");
+        return "wedding_card";
     }
+
 }
