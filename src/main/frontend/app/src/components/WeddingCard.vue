@@ -126,7 +126,7 @@ export default {
   data() {
     return {
       name: undefined,
-      mode: "end", // intro, start, question, end
+      mode: "intro", // intro, start, question, end
       question_num: 0,
       cur_answer: "",
       progress: 0,
