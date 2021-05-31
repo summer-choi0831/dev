@@ -194,17 +194,16 @@ export default {
   },
   methods: {
     go(mode) {
-      this.sendRecord();
       console.log("go mode ", mode);
       this.mode = mode;
 
-      if(this.mode == 'end'){
+      if(this.mode === "end"){
         this.end_time = moment();
         this.duration = moment.duration(end_time.diff(start_time)).asSeconds;
       }
+      this.sendRecord();
     },
     go_question(num) {
-      this.sendRecord();
       console.log("this.question.length", this.question.length);
       console.log("num", num);
       if (num < this.question.length) {
@@ -222,6 +221,7 @@ export default {
           alert("오답입니다. \n" + this.question[this.question_num].hint);
         }
       }
+      this.sendRecord();
     },
     sendRecord: function() {
       let request = {
